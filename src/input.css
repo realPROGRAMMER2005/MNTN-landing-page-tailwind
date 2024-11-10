@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    @apply text-white font-bold font-['Roboto'] text-lg
+}
