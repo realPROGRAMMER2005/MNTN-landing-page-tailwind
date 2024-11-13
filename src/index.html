@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="sm:text-[10px] md:text-[12px] lg:text-[18px]">
+<html class="text-[8px] sm:text-[10px] md:text-[12px] lg:text-[14px] xl:text-[18px]">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,14 +9,13 @@
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 	</head>
 	<body class="bg-[#0B1D26] overflow-x-hidden">
-		<section class="relative h-[140vh] w-full max-h-[1400px]">
-			<div class="absolute z-[-1] h-full top-0 w-full bg-gradient-to-b from-[rgba(0,0,0,0.5)] via-[rgba(0,0,0,0.5)] to-[#00000000]"></div>
-			<div class="absolute z-[-1] h-full top-0 w-full bg-gradient-to-t from-[#0B1D26] to-[#00000000]"></div>
-			<img class="absolute z-[-2] top-0 h-[140vh] max-h-[1400px] w-full object-cover" src="images/mountains_background.jpeg">
+		<section class="relative h-[140vh] max-h-[100vh] sm:max-h-[120vh] md:max-h-[890px]">
+			<div class="absolute z-[-1] h-full top-0 w-full bg-gradient-to-b from-[rgba(0,0,0,0.5)] via-[rgba(11,29,38,0.5)] to-[#0B1D26]"></div>
+			<img class="absolute z-[-2] top-0  h-[140vh] max-h-[100vh] sm:max-h-[120vh] md:max-h-[890px] w-full object-cover" src="images/mountains_background.jpeg">
 			<div class="w-full max-w-[1800px] mx-auto px-16 pt-16">
 				<div class="flex z-[2] justify-between text-center items-end">
 					<div class="font-['Playfair'] text-3xl">MNTN</div>
-					<ul class="flex gap-10 justify-center">
+					<ul class=" gap-10 justify-center hidden sm:flex">
 						<li>
 							<a href="#">Equipment</a>
 						</li>
@@ -27,7 +26,7 @@
 							<a href="#">Blog</a>
 						</li>
 					</ul>
-					<a class="flex items-center gap-2" href="#">
+					<a class="items-center gap-2 hidden sm:flex" href="#">
 						<svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg>
 						<div>Account</div>
 					</a>
@@ -36,7 +35,7 @@
 			
 			<div class="px-16 flex justify-between items-start mt-48 mx-auto max-w-[1800px]">
 
-				<div class="flex rotate-[90deg] gap-3 origin-top-left mt-[25px]">
+				<div class="hidden sm:flex rotate-[90deg] gap-3 origin-top-left mt-[2rem]">
 					<div>
 						Follow us
 					</div>
@@ -80,12 +79,12 @@
 
 		</section>
 
-		<section class="max-w-[1500px] mx-auto px-32 relative top-[-150px] right-[-60px]">
+		<section class="max-w-[1500px] mx-auto px-32 relative top-[-150px] lg:right-[-60px]">
 
-			<div class="flex justify-between">
+			<div class="flex flex-col gap-8 items-center xl:flex-row xl:justify-evenly">
 				<div class="flex flex-col max-w-[632px] gap-7 relative ">
 
-					<div class="absolute top-[0px] left-[-160px] z-[-1] text-[14.5rem] opacity-20">01</div>
+					<div class="absolute top-[0px] left-[-5px] sm:left-[-6px] md:left-[-7px] lg:left-[-125px] xl:left-[-161px] z-[-1] text-[14.5rem] opacity-20">01</div>
 
 					<div class="flex items-center gap-12">
 						<hr class="w-20 border-2 rounded-full  border-[#FBD784]">
@@ -118,8 +117,8 @@
 				</div>
 
 
-				<div class=" top-[-90px] relative">
-					<img src="images/01.png" class="max-w-[500px] max-h-[600px]">
+				<div class="xl:top-[-90px] relative">
+					<img src="images/01.png" class="object-cover max-w-[20rem]" >
 				</div>
 			</div>
 
