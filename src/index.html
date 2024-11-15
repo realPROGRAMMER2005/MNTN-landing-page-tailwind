@@ -15,9 +15,32 @@
 	</head>
 	<body class="bg-[#0B1D26] overflow-x-hidden">
 		<section class="relative h-[140vh] max-h-[100vh] sm:max-h-[120vh] md:max-h-[890px]">
+			<div class="absolute z-[1] h-full translate-x-[-100vw] transition-transform duration-300 burger-menu bg-[#0B1D26]">
+				
+				<ul class="flex flex-col justify-center items-center gap-y-3 mx-10">
+					<li class="mt-8">
+						<a href="#">Equiment</a>
+					</li>
+					<li>
+						<a href="#">About us</a>
+					</li>
+					<li>
+						<a href="#">Blog</a>
+					</li>
+					<li>
+						<a href="#">Account</a>
+					</li>
+					<li>
+						<a href="#">Instagram</a>
+					</li>
+					<li>
+						<a href="#">Twitter</a>
+					</li>
+				</ul>
+			</div>
 			<div class="absolute z-[-1] h-full top-0 w-full bg-gradient-to-b from-[rgba(0,0,0,0.5)] via-[rgba(11,29,38,0.5)] to-[#0B1D26]"></div>
 			<img class="absolute z-[-2] top-0  h-[140vh] max-h-[100vh] sm:max-h-[120vh] md:max-h-[890px] w-full object-cover" src="images/mountains_background.jpeg">
-			<div class="w-full max-w-[1800px] mx-auto px-4 sm:px-16 pt-16">
+			<div class="w-full max-w-[1800px] mx-auto px-4 sm:px-16 pt-8 sm:pt-16">
 				<div class="flex z-[2] justify-between text-center items-end">
 					<div class="font-['Playfair'] text-3xl">MNTN</div>
 					<ul class=" gap-10 justify-center hidden sm:flex">
@@ -35,6 +58,12 @@
 						<svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg>
 						<div>Account</div>
 					</a>
+					<div class="sm:hidden self-center burger-button-open cursor-pointer">
+						<svg class="fill-white w-8 h-8"  xmlns="http://www.w3.org/2000/svg"><path d="M5 11a1 1 0 1 0 0 2zm14 2a1 1 0 1 0 0-2zM5 6a1 1 0 0 0 0 2zm14 2a1 1 0 1 0 0-2zM5 16a1 1 0 1 0 0 2zm14 2a1 1 0 1 0 0-2zM5 13h14v-2H5zm0-5h14V6H5zm0 10h14v-2H5z" fill="currentColor"/></svg>
+					</div>
+					<div class="hidden self-center cursor-pointer burger-button-close">
+						<svg class="fill-white w-8 h-8"  xmlns="http://www.w3.org/2000/svg"><path d="M5 11a1 1 0 1 0 0 2zm14 2a1 1 0 1 0 0-2zM5 6a1 1 0 0 0 0 2zm14 2a1 1 0 1 0 0-2zM5 16a1 1 0 1 0 0 2zm14 2a1 1 0 1 0 0-2zM5 13h14v-2H5zm0-5h14V6H5zm0 10h14v-2H5z" fill="currentColor"/></svg>
+					</div>
 				</div>
 			</div>
 			
@@ -252,6 +281,34 @@
 
 		</footer>
 
-		
+	
+		<script>
+			const burgerButtonOpen = document.querySelector('.burger-button-open');
+			const burgerButtonClose = document.querySelector('.burger-button-close');
+			const burgerMenu = document.querySelector('.burger-menu');
+	
+			burgerButtonOpen.addEventListener('click', () => {
+				burgerMenu.classList.remove('translate-x-[-100vw]'); // Открываем меню
+				burgerMenu.classList.add('translate-x-0');
+				burgerButtonOpen.classList.add('hidden');
+				burgerButtonClose.classList.remove('hidden');
+			});
+	
+			burgerButtonClose.addEventListener('click', () => {
+				burgerMenu.classList.add('translate-x-[-100vw]'); // Закрываем меню
+				burgerMenu.classList.remove('translate-x-0');
+				burgerButtonOpen.classList.remove('hidden');
+				burgerButtonClose.classList.add('hidden');
+			});
+	
+			window.addEventListener('resize', () => {
+				if (window.innerWidth > 640) {
+					burgerMenu.classList.add('translate-x-[-100vw]'); // Скрываем меню при ширине более 640px
+					burgerMenu.classList.remove('translate-x-0');
+					burgerButtonOpen.classList.remove('hidden');
+					burgerButtonClose.classList.add('hidden');
+				}
+			});
+		</script>
 	</body>
 </html>
